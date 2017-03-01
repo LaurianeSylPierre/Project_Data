@@ -49,9 +49,13 @@
 
 
   while ($row = $query->fetch())
-  { ?>
+  
+  : ?>
     <span><?php echo $row['Leading_Cause']; ?></span><?php
-  }
+
+  endwhile;
+
+
   }
 
 
