@@ -1,7 +1,3 @@
-<?php
-
-?>
-
 <!DOCTYPE html>
 
 <html>
@@ -37,6 +33,23 @@
     </select>
 
   </form>
+
+  <?php
+
+  $query = $db->prepare("SELECT Leading_Cause FROM Death_Cause
+    ORDER BY RAND()
+    LIMIT 1");
+
+  $query->execute();
+
+
+  while ($row = $query->fetch())
+  { ?>
+    <span><?php echo $row['Leading_Cause']; ?></span><?php
+  }
+
+
+  ?>
 
 </body>
 
