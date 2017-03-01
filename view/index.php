@@ -1,6 +1,6 @@
 <?php
 
-require "model/pdo.php";
+?>
 
 <!DOCTYPE html>
 
@@ -16,6 +16,9 @@ require "model/pdo.php";
 
     <label for="name">Name or pseudo</label>
     <input type="text" name="name">
+
+    <input type="radio" name="gender" value="male">
+    <input type="radio" name="gender" value="female">
 
   </form>
 

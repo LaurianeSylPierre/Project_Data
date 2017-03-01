@@ -1,6 +1,7 @@
 <?php
 
-header("Location: view/index.php");
-exit;
+require "model/pdo.php";
+
+include_once "view/index.php";
 
  ?>
