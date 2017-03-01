@@ -30,11 +30,16 @@
       <option value="50">25-50</option>
       <option value="75">50-75</option>
       <option value="100">75-100</option>
-    </select>
+    </select> <br />
+
+    <input type="submit" value="submit">
 
   </form>
 
   <?php
+
+  if($_POST)
+  {
 
   $query = $db->prepare("SELECT Leading_Cause FROM Death_Cause
     ORDER BY RAND()
@@ -46,6 +51,7 @@
   while ($row = $query->fetch())
   { ?>
     <span><?php echo $row['Leading_Cause']; ?></span><?php
+  }
   }
 
 
