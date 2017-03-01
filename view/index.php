@@ -51,7 +51,9 @@
 
   {
 
-  $query = $db->prepare("SELECT Leading_Cause FROM Death_Cause
+  $name = $_POST['name'];
+
+  $query = $db->prepare("SELECT Leading_Cause, Contents FROM Death_Cause
     ORDER BY RAND()
     LIMIT 1");
 
@@ -61,18 +63,19 @@
   while ($row = $query->fetch())
 
   : ?>
-    <span><?php echo $row['Leading_Cause']; ?></span><?php
+    <span><?php echo $row['Leading_Cause']; ?></span> <br />
+
+    <span><?php echo $row['Contents']; ?></span><?php
 
   endwhile;
 
   }
 
+  } ?>
 
-  }
-
-
-  ?>
 
 </body>
+
+
 
 </html>
