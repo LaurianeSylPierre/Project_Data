@@ -39,6 +39,16 @@
   <?php
 
   if($_POST)
+
+  {
+
+  if(empty($_POST['name']))
+  {
+    echo "Please just indicate a name";
+  }
+
+  else
+
   {
 
   $query = $db->prepare("SELECT Leading_Cause FROM Death_Cause
@@ -49,11 +59,13 @@
 
 
   while ($row = $query->fetch())
-  
+
   : ?>
     <span><?php echo $row['Leading_Cause']; ?></span><?php
 
   endwhile;
+
+  }
 
 
   }
