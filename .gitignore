@@ -1,2 +1,6 @@
+*pdo.php
+*.ftpconfig
+*death_cause.sql
+
 model/PDO.php
 .ftpconfig
