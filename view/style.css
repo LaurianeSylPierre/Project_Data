@@ -1,0 +1,26 @@
+header{
+    margin-bottom: 3%;
+}
+
+button{
+    margin: 0 auto;
+    text-align: center;
+}
+
+input[type=text]:focus:not([readonly]) {
+    border-bottom: 1px solid #d7ccc8;
+    box-shadow: 0 1px 0 0 #d7ccc8;
+}
+
+input[type=text].valid {
+    border-bottom: 1px solid #dcedc8;
+    box-shadow: 0 1px 0 0 #dcedc8;
+}
+
+.cadre{
+    height: 500px;
+}
+
+.plus{
+    display: none;
+}
