@@ -12,6 +12,58 @@ header{
     margin-bottom: 3%;
 }
 
+a{
+    text-decoration: none;
+    color: #241006;
+}
+
+
+/*---------------INDEX CHOSE YOUR DESTINY----------------*/
+
+h1{
+    text-transform: uppercase;
+    color: #241006;
+}
+
+.to_know{
+    position: relative;
+    width: 500px;
+    height: 500px;
+    z-index: 1;
+    transition: all .6s;
+}
+
+.to_know:hover{
+    box-shadow: 5px 5px 10px;
+    border: 2px solid #bcaaa4;
+    z-index: 2;
+    transform: scale(1.05, 1.05);
+}
+
+.to_chose{
+    position: relative;
+    width: 500px;
+    height: 500px;
+    z-index: 1;
+    transition: all .6s;
+}
+
+.to_chose:hover{
+    box-shadow: 5px 10px 10px;
+    border: 2px solid #ff9e80;
+    z-index: 2;
+    transform: scale(1.05, 1.05);
+}
+
+p{
+    width: 100%;
+    text-transform: uppercase;
+}
+
+/*---------------YOUR DEATH----------------*/
+
+/*-----Premier carré------*/
+
 button{
     margin: 0 auto;
     text-align: center;
@@ -27,10 +79,61 @@ input[type=text].valid {
     box-shadow: 0 1px 0 0 #dcedc8;
 }
 
+/*-----Deuxième carré------*/
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
 .cadre{
+    text-align: justify;
     height: 500px;
 }
 
-.plus{
-    display: none;
+/*--------------------MEDIA QUERIES--------------------*/
+
+@media all and (max-width: 1000px){
+    .to_know{
+        width: 300px;
+        height: 300px;
+    }
+
+    .to_chose{
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media all and (max-width: 700px){
+    .to_know{
+        width: 250px;
+        height: 250px;
+    }
+
+    .to_chose{
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media all and (max-width: 400px){
+    .to_know{
+        width: 150px;
+        height: 150px;
+    }
+
+    .to_chose{
+        width: 150px;
+        height: 150px;
+    }
 }
