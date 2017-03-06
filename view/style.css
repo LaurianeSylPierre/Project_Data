@@ -50,7 +50,7 @@ h1{
 
 .to_chose:hover{
     box-shadow: 5px 10px 10px;
-    border: 2px solid #ff9e80;
+    border: 2px solid #ffd180;
     z-index: 2;
     transform: scale(1.05, 1.05);
 }
