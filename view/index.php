@@ -1,4 +1,8 @@
-+<!DOCTYPE html>
+<?php 
+require "../model/pdo.php";
+?>
+
+<!DOCTYPE html>
  <html lang="en">
  <head>
      <meta charset="UTF-8">
@@ -121,8 +125,8 @@
   /*$req = $db->prepare('INSERT INTO last_death(name, leading_cause) VALUES(:name, :leading_cause)');
   $req->execute(array(
     'name' => $name,
-    'leading_cause' => $leadingCause
-  )); */
+    'leading_cause' => $leadingCause */
+  )); 
 
   }
   } ?>
