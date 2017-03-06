@@ -1,4 +1,8 @@
-+<!DOCTYPE html>
+<?php 
+require "../model/pdo.php";
+?>
+
+<!DOCTYPE html>
  <html lang="en">
  <head>
      <meta charset="UTF-8">
@@ -11,7 +15,7 @@
  </head>
  <body>
 
-     <header>
+     <!--<header>
          <nav>
              <div class="nav-wrapper brown lighten-3">
                  <a href="#" class="brand-logo center">Logo</a>
@@ -83,46 +87,35 @@
      $(document).ready(function() {
          $('select').material_select();
     });
-     </script>
+     </script> -->
+     
+     <form action="" method="post">
+         
+        <input type="text" name="disease">name  
+         
+        <input type="submit" value="submit">
+         
+     </form>
 
  </body>
  </html>
 
 
 
-  <?php
+<?php
+  
+if(isset($_POST))
+{
+    
+$nameDisease = $_POST['disease'];
 
-  if($_POST)
-  {
-  if(empty($_POST['name']))
-  {
-    echo "Please just indicate a name";
-  }
-  else
-  {
-  $name = $_POST['name'];
+echo $nameDisease;
+    
+$req = $db->prepare('INSERT into disease_fan(name) VALUES(:name)');
+    
+$req->execute(array('name' => $nameDisease));
+    
+}
+  
 
-  $query = $db->prepare("SELECT Leading_Cause, Contents FROM Death_Cause
-    ORDER BY RAND()
-    LIMIT 1");
-
-  $query->execute();
-
-  while ($row = $query->fetch())
-  : ?>
-    <span><?php echo $row['Leading_Cause']; ?></span> <br />
-
-    <span><?php echo $row['Contents']; ?></span><?php
-
-    $leadingCause = $row['Leading_Cause'];
-
-  endwhile;
-
-  /*$req = $db->prepare('INSERT INTO last_death(name, leading_cause) VALUES(:name, :leading_cause)');
-  $req->execute(array(
-    'name' => $name,
-    'leading_cause' => $leadingCause
-  )); */
-
-  }
-  } ?>
+?>
