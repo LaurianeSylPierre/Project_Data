@@ -1,6 +1,6 @@
 <?php include '../model/pdo.php'; ?>
 
-    <div value="ETHNICITY">Disease</div>
+    <div value="disease">Disease</div>
     <?php
 $sth = $db->prepare("SELECT Leading_Cause FROM Death_Cause GROUP BY Leading_Cause ORDER BY Leading_Cause ASC");
  $sth->execute();
