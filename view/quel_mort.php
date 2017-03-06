@@ -6,28 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
-    <link type="text/css" rel="stylesheet" href="style1.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="style.css"  media="screen,projection"/>
     <title>Document</title>
 </head>
 
 <body>
-	<header>
-        <nav>
-            <div class="nav-wrapper brown lighten-3">
-                <a href="#" class="brand-logo center">Tu préfères...</a>
-            </div>
-        </nav>
-    </header>
-	
-	<div class="container">
-		<div class="row">
-			<div class="valign-wrapper color">
-				<button type="submit" class="col s5 waves-effect waves-light btn blue-grey lighten-1">blablalbalblal</button>
-				<div class="col s2 center">
-					<p>Ou</p>
-				</div>
-				<button type="submit" class="col s5 waves-effect waves-light btn blue-grey lighten-1">blablalbalba</button>
-			</div>
-		</div>
-	</div>
+	<article class="container">
+    <div class="row center">
+        <h1>Chose your destiny</h1>
+        <p>Do you prefere...</p>
+    </div>
+    <div class="row">
+        <a href="index.php?yd" class="col offset-s1 s5 valign-wrapper brown lighten-5 to_know"><p class="valign center-align">To know how you will die</p></a>
+        <a href="index.php?x.php" class="col s5 valign-wrapper orange lighten-5 to_chose"><p class="valign center-align">To chose how you will die</p></a>
+    </div>
+</article>
 </body>
