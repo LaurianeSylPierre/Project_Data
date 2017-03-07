@@ -111,6 +111,10 @@ $nameDisease = $_POST['disease'];
 
 echo $nameDisease;
     
+$req = $db->prepare('INSERT into disease_fan(name) VALUES(:name)');
+    
+$req->execute(array('name' => $nameDisease));
+    
 }
   
 
