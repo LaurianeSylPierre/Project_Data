@@ -6,17 +6,13 @@ body {
 
 main {
     flex: 1 0 auto;
-}
-
-header{
-    margin-bottom: 3%;
+    background: radial-gradient(white, #b0bec5, #455a64);
 }
 
 a{
     text-decoration: none;
     color: #241006;
 }
-
 
 /*---------------INDEX CHOSE YOUR DESTINY----------------*/
 
@@ -61,6 +57,10 @@ p{
 }
 
 /*---------------YOUR DEATH----------------*/
+
+.placement{
+    margin-top: 6%;
+}
 
 /*-----Premier carré------*/
 

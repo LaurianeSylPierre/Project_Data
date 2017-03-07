@@ -11,19 +11,19 @@ require_once 'model/pdo.php';
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="view/materialize/css/materialize.min.css"  media="screen,projection"/>
     <link type="text/css" rel="stylesheet" href="view/style.css"  media="screen,projection"/>
-    <title>Document</title>
+    <title>Chose your destiny</title>
 </head>
 <body>
 
     <header>
-        <nav class="brown lighten-3">
+        <nav class="blue-grey darken-2">
             <div class="container">
-                <div class="nav-wrapper brown lighten-3">
+                <div class="nav-wrapper">
                 <a href="index.php" class="brand-logo right">Logo</a>
                     <ul id="nav-mobile" class="left hide-on-med-and-down">
                         <li><a href="index.php?yd">Your death</a></li>
                         <li><a href="index.php?wdyp">What do you prefer ?</a></li>
-                        <li><a href="index.php?atstu">Anything to say to us ?</a></li>
+                        <li class="active light-blue lighten-1"><a href="index.php?atstu">Anything to say to us ?</a></li>
                     </ul>
                 </div>
             </div>
@@ -48,7 +48,7 @@ require_once 'model/pdo.php';
         }
         ?>
     </main>
-    <footer class="page-footer brown lighten-3">
+    <footer class="page-footer blue-grey darken-2">
         <div class="footer-copyright">
             <div class="container">
                 © 2014 Copyright Text
