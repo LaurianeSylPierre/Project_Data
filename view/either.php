@@ -11,11 +11,25 @@
                 <h3>Which disease are you going to choose?</h3>
 
                 <form>
+<?php
+$sth = $db->prepare("SELECT Leading_Cause FROM Death_Cause order by RAND() LIMIT 1");
+ $sth->execute();
+ $result = $sth->fetchAll(PDO::FETCH_ASSOC);
+foreach ($result as $row){
 
-                    Yes:
-    <input type="radio" name="vote" value="0" onclick="getVote(this.value)">
-    <br>No:
-    <input type="radio" name="vote" value="1" onclick="getVote(this.value)">
+      ?>
+<p><?php echo $row["Leading_Cause"]; ?><input type="radio" name="vote" value="0" onclick="getVote(this.value)"></p>
+<?php }?>
+
+<?php
+$sth = $db->prepare("SELECT Leading_Cause FROM Death_Cause order by RAND() LIMIT 1");
+ $sth->execute();
+ $result = $sth->fetchAll(PDO::FETCH_ASSOC);
+foreach ($result as $row){
+
+      ?>
+<p><?php echo $row["Leading_Cause"]; ?><input type="radio" name="vote" value="1" onclick="getVote(this.value)"></p>
+<?php }?>
                     <script>
         function getVote(int) {
             if (window.XMLHttpRequest) {
