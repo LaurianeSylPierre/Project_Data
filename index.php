@@ -40,7 +40,7 @@ require_once 'model/pdo.php';
         }
         else if (isset($_GET["wdyp"])) {
 
-            include "view/x.php";
+            include "view/quel_mort.php";
         }
         else if (isset($_GET["atstu"])) {
 
