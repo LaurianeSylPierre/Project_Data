@@ -19,5 +19,5 @@
         <a href="index.php?yd" class="col offset-s1 s5 valign-wrapper brown lighten-5 to_know"><p class="valign center-align">blopblopblop</p></a>
         <a href="index.php?x.php" class="col s5 valign-wrapper orange lighten-5 to_chose"><p class="valign center-align">blopblopblop</p></a>
     </div>
-</article>
+	</article>
 </body>
