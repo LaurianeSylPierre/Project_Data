@@ -6,17 +6,13 @@ body {
 
 main {
     flex: 1 0 auto;
-}
-
-header{
-    margin-bottom: 3%;
+    background: radial-gradient(white, #b0bec5, #455a64);
 }
 
 a{
     text-decoration: none;
     color: #241006;
 }
-
 
 /*---------------INDEX CHOSE YOUR DESTINY----------------*/
 
@@ -50,7 +46,7 @@ h1{
 
 .to_chose:hover{
     box-shadow: 5px 10px 10px;
-    border: 2px solid #ff9e80;
+    border: 2px solid #ffd180;
     z-index: 2;
     transform: scale(1.05, 1.05);
 }
@@ -61,6 +57,10 @@ p{
 }
 
 /*---------------YOUR DEATH----------------*/
+
+.placement{
+    margin-top: 6%;
+}
 
 /*-----Premier carré------*/
 
