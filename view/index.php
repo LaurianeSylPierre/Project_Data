@@ -93,7 +93,7 @@ require "../model/pdo.php";
          
         <input type="text" name="disease">name  
          
-        <input type="submit" value="submit">
+        <input name="mainsubmit" type="submit" value="submit">
          
      </form>
 
@@ -104,18 +104,39 @@ require "../model/pdo.php";
 
 <?php
   
-if(isset($_POST))
-{
+if (isset($_POST['mainsubmit'])) {
     
-$nameDisease = $_POST['disease'];
+    $nameDisease = $_POST['disease'];
+    
+    $req = $db->prepare('INSERT into disease_fan (name, vote) VALUES(:name, 0)');
+    
+    $req->execute(array('name' => $nameDisease));
+    
+    $query = $db->query('SELECT * FROM disease_fan');
 
-echo $nameDisease;
-    
-$req = $db->prepare('INSERT into disease_fan(name) VALUES(:name)');
-    
-$req->execute(array('name' => $nameDisease));
-    
+    while ($result = $query->fetch()) { ?>
+        <form action="" method="post">
+            <p><?php echo $result['name'] . " : " . $result['vote'];?>
+                <input name="secondsubmit" type="submit" value="+1" />
+                <input type="hidden" name="id" value="<?php echo $result['id'];?>" />
+            </p>
+        </form>
+    <?php }
 }
-  
+
+if (isset($_POST['secondsubmit'])) {
+    $req = $db->prepare("UPDATE disease_fan SET vote = vote + 1 WHERE id = " . $_POST['id']);
+    $req->execute();
+    $query = $db->query('SELECT * FROM disease_fan');
+
+    while ($result = $query->fetch()) {?>
+        <form action="" method="post">
+            <p><?php echo $result['name'] . " : " . $result['vote'];?>
+                <input name="secondsubmit" type="submit" value="+1" />
+                <input type="hidden" name="id" value="<?php echo $result['id'];?>" />
+            </p>
+        </form>
+    <?php }
+}
 
 ?>
