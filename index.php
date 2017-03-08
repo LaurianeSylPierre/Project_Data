@@ -22,8 +22,8 @@ require_once 'model/pdo.php';
                 <a href="index.php" class="brand-logo right">Logo</a>
                     <ul id="nav-mobile" class="left hide-on-med-and-down">
                         <li><a href="index.php?yd">Your death</a></li>
-                        <li><a href="index.php?wdyp">What do you prefer ?</a></li>
-                        <li class="active light-blue lighten-1"><a href="index.php?atstu">Anything to say to us ?</a></li>
+                        <li><a href="index.php?wdyp">What do you prefere ?</a></li>
+                        <li class="couleur"><a href="index.php?atstu">Anything to say to us ?</a></li>
                     </ul>
                 </div>
             </div>
@@ -40,7 +40,7 @@ require_once 'model/pdo.php';
         }
         else if (isset($_GET["wdyp"])) {
 
-            include "view/quel_mort.php";
+            include "view/either.php";
         }
         else if (isset($_GET["atstu"])) {
 
