@@ -121,6 +121,7 @@ input[type=text].valid {
 /*--------------------EITHER--------------------*/
 
 h3{
+    margin: 5%;
     text-transform: uppercase;
     text-align: center;
 }
