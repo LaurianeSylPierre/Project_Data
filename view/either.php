@@ -3,7 +3,7 @@
     ini_set('display_errors',1);
     error_reporting(E_ALL|E_STRICT);
 
-    include('functions.php');
+    include('/../controller/functions.php');
 	unset($_SESSION['answered']);
 ?>
 
@@ -11,10 +11,6 @@
 <html>
  <head>
   <title>Rather than</title>
-  <meta name="generator" content="">
-  <meta name="author" content="http://www.hackandphp.com">
-  <meta name="keywords" content="">
-  <meta name="description" content="">
   <link href="style.css" rel="stylesheet" type="text/css"/>
      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
