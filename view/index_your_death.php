@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container placement">
     <div class="row">
         <div class="col s5">
             <div class="row valign-wrapper brown lighten-2 z-depth-2 cadre">

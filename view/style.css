@@ -6,10 +6,7 @@ body {
 
 main {
     flex: 1 0 auto;
-}
-
-header{
-    margin-bottom: 3%;
+    background: radial-gradient(white, #b0bec5, #455a64);
 }
 
 a{
@@ -17,6 +14,13 @@ a{
     color: #241006;
 }
 
+.couleur a{
+    color: #241006;
+}
+
+.couleur{
+    background-color: #C1D3C8;
+}
 
 /*---------------INDEX CHOSE YOUR DESTINY----------------*/
 
@@ -26,6 +30,12 @@ h1{
 }
 
 .to_know{
+    background-image: url('img/bloody-hand-1.gif');
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-blend-mode: multiply;
+    background-color: #5C6983;
+    color: white;
     position: relative;
     width: 500px;
     height: 500px;
@@ -35,12 +45,16 @@ h1{
 
 .to_know:hover{
     box-shadow: 5px 5px 10px;
-    border: 2px solid #bcaaa4;
+    border: 2px solid #01579b;
     z-index: 2;
     transform: scale(1.05, 1.05);
 }
 
 .to_chose{
+    background-image: url('img/bloody-hand-1.gif');
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-blend-mode: multiply;
     position: relative;
     width: 500px;
     height: 500px;
@@ -61,6 +75,10 @@ p{
 }
 
 /*---------------YOUR DEATH----------------*/
+
+.placement{
+    margin-top: 6%;
+}
 
 /*-----Premier carré------*/
 
@@ -98,6 +116,38 @@ input[type=text].valid {
 .cadre{
     text-align: justify;
     height: 500px;
+}
+
+/*--------------------EITHER--------------------*/
+
+h3{
+    margin: 5%;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+input[type=radio]{
+    width: 500px;
+    height: 500px;
+}
+
+input[type=radio]:not(:checked){
+    position : relative;
+    opacity: 0;
+    left: 0;
+}
+
+input[type=radio]:checked{
+    position : relative;
+    opacity: 0;
+    left: 0;
+}
+
+.prefere_disease{
+    text-transform: uppercase;
+    width: 500px;
+    position: absolute;
+    text-align: center;
 }
 
 /*--------------------MEDIA QUERIES--------------------*/

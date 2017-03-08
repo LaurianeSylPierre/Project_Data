@@ -1,40 +1,50 @@
-<?php include '../model/pdo.php'; ?>
+<?php
+
+    ini_set('display_errors',1);
+    error_reporting(E_ALL|E_STRICT);
+
+    include('../controller/functions.php');
+	unset($_SESSION['answered']);
+?>
+
+<!DOCTYPE html>
 <html>
-    <head>
-        <script
-      src="https://code.jquery.com/jquery-3.1.1.min.js"
-      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-      crossorigin="anonymous"></script>
-    </head>
-        <body>
-            <div id="poll">
-                <h3>Which disease are you going to choose?</h3>
+ <head>
+  <title>Rather than</title>
+  <link href="style.css" rel="stylesheet" type="text/css"/>
+     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+ </head>
+ <body>
+   <div class="container">
+       <div class="row">
+           <h3 align="center">Which disease are you going to choose?</h3>
+           <div class="col-sm-4 col-sm-offset-4">
+               <div class="panel panel-primary">
+                   <div class="panel-heading">
+                   </div>
+                       <div class="panel-body">
+                          <div class="col-sm-12"> <div class="poll">Loading...</div></div>
+                           <ul class="list-group">
 
-                <form>
 
-                    Yes:
-    <input type="radio" name="vote" value="0" onclick="getVote(this.value)">
-    <br>No:
-    <input type="radio" name="vote" value="1" onclick="getVote(this.value)">
-                    <script>
-        function getVote(int) {
-            if (window.XMLHttpRequest) {
-                        // code for IE7+, Firefox, Chrome, Opera, Safari
-                        xmlhttp=new XMLHttpRequest();
-                      } else {  // code for IE6, IE5
-                        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-                      }
-                      xmlhttp.onreadystatechange=function() {
-                        if (this.readyState==4 && this.status==200) {
-                          document.getElementById("poll").innerHTML=this.responseText;
-                        }
-                      }
-                      xmlhttp.open("GET","poll.php?vote="+int,true);
-                      xmlhttp.send();
-                    }
-                    </script>
-                </form>
-            </div>
+                           </ul>
+                       </div>
 
-        </body>
+                       <div class="panel-footer">
+                           <div class="row"><div class="col-sm-6"> <a href="#"></a> <button type="button" class="btn btn-primary btn-sm button">
+                                       Vote</button></a></div> <div class="col-sm-6"><a href="javascript:;" onClick="javascript:get_poll();"><div class="btn btn-primary btn-sm pull-right"> Next Question</div></a></div></div>
+
+                   </div>
+
+
+
+
+	   </div>
+   </div>
+       </div>
+
+ </body>
 </html>
