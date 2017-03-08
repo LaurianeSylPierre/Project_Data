@@ -1,5 +1,5 @@
 <?php
-	require("controller/functions.php");
+	require("functions.php");
 	if(isset($_POST) && count($_POST)){
 		$action = $_POST['act'];
 

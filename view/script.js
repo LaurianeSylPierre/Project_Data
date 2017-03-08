@@ -55,7 +55,7 @@ function get_poll(){
 	$("ul").html("");
 	$.ajax({
 		type: "POST",
-		url: "ajax.php",
+		url: "../controller/ajax.php",
 		data : "act=getq",
 		dataType: "json",
 		success: function(response){
